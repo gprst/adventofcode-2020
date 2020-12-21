@@ -13,5 +13,6 @@ func main() {
 
 	sort.Ints(inputs)
 
-	fmt.Println("The answer is:", multiplyTwoNumbersThatSumUpTo2020(inputs))
+	fmt.Println("The answer for the first part is:", multiplyTwoNumbersThatSumUpTo2020(inputs))
+	fmt.Println("The answer for the second part is:", multiplyThreeNumbersThatSumUpTo2020(inputs))
 }
