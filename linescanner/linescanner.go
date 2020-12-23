@@ -3,12 +3,11 @@ package linescanner
 import (
 	"bufio"
 	"os"
-	"strconv"
 )
 
-// ScanLines returns an array of integers containing all lines of the file whose
+// ScanLines returns an array of strings containing all lines of the file whose
 // path is given as input
-func ScanLines(filePath string) ([]int, error) {
+func ScanLines(filePath string) ([]string, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
@@ -20,11 +19,10 @@ func ScanLines(filePath string) ([]int, error) {
 
 	scanner.Split(bufio.ScanLines)
 
-	var lines []int
+	var lines []string
 
 	for scanner.Scan() {
-		input, _ := strconv.Atoi(scanner.Text())
-		lines = append(lines, input)
+		lines = append(lines, scanner.Text())
 	}
 
 	return lines, nil
