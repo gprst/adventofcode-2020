@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"sort"
+	"strconv"
 )
 
 func main() {
@@ -19,8 +20,18 @@ func main() {
 		panic(err)
 	}
 
-	sort.Ints(inputs)
+	var numbers []int
 
-	fmt.Println("The answer for the first part is:", multiplyTwoNumbersThatSumUpTo2020(inputs))
-	fmt.Println("The answer for the second part is:", multiplyThreeNumbersThatSumUpTo2020(inputs))
+	for _, input := range inputs {
+		number, err := strconv.Atoi(input)
+		if err != nil {
+			panic(err)
+		}
+		numbers = append(numbers, number)
+	}
+
+	sort.Ints(numbers)
+
+	fmt.Println("The answer for the first part is:", multiplyTwoNumbersThatSumUpTo2020(numbers))
+	fmt.Println("The answer for the second part is:", multiplyThreeNumbersThatSumUpTo2020(numbers))
 }
