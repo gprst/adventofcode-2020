@@ -1,4 +1,4 @@
-package day1
+package main
 
 func multiplyThreeNumbersThatSumUpTo2020(numbers []int) int {
 	const goal = 2020

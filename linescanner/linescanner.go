@@ -1,4 +1,4 @@
-package day1
+package linescanner
 
 import (
 	"bufio"
@@ -6,7 +6,9 @@ import (
 	"strconv"
 )
 
-func scanLines(filePath string) ([]int, error) {
+// ScanLines returns an array of integers containing all lines of the file whose
+// path is given as input
+func ScanLines(filePath string) ([]int, error) {
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, err
