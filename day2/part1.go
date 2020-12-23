@@ -1,16 +1,6 @@
 package main
 
-import (
-	"strconv"
-	"strings"
-)
-
-func getMinAndMax(minAndMax string) (uint8, uint8) {
-	splitMinAndMax := strings.Split(minAndMax, "-")
-	min, _ := strconv.Atoi(splitMinAndMax[0])
-	max, _ := strconv.Atoi(splitMinAndMax[1])
-	return uint8(min), uint8(max)
-}
+import "strings"
 
 func getMandatoryLetterCount(mandatoryLetter rune, password string) uint8 {
 	var count uint8
@@ -22,13 +12,10 @@ func getMandatoryLetterCount(mandatoryLetter rune, password string) uint8 {
 	return count
 }
 
-func checkPasswordDatabase(inputs []string) uint16 {
-	var validPasswords uint16
+func checkPasswordDatabase(inputs []string) (validPasswords uint16) {
 	for _, input := range inputs {
 		rawSplitInput := strings.Split(input, " ")
-		min, max := getMinAndMax(rawSplitInput[0])
-		mandatoryLetter := rune(rawSplitInput[1][0])
-		password := rawSplitInput[2]
+		min, max, mandatoryLetter, password := parseInput(rawSplitInput)
 		mandatoryLetterCount := getMandatoryLetterCount(mandatoryLetter, password)
 		if mandatoryLetterCount >= min && mandatoryLetterCount <= max {
 			validPasswords++
