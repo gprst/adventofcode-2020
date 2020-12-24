@@ -23,4 +23,5 @@ func main() {
 	patternLength = uint16(len(inputs[0]))
 
 	fmt.Println("The answer for the first part is:", getEncounteredTreesCount(inputs))
+	fmt.Println("The answer for the second part is:", getMultipliedEncounteredTreesCount(inputs))
 }
