@@ -2,6 +2,7 @@ package inputscanner
 
 import (
 	"bufio"
+	"io/ioutil"
 	"os"
 )
 
@@ -26,4 +27,14 @@ func ScanLines(filePath string) ([]string, error) {
 	}
 
 	return lines, nil
+}
+
+// ScanInput returns the content of the file whose path is given as argument as
+// a string
+func ScanInput(filepath string) (string, error) {
+	file, err := ioutil.ReadFile(filepath)
+	if err != nil {
+		return "", err
+	}
+	return string(file), nil
 }
