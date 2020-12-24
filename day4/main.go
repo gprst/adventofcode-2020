@@ -40,4 +40,5 @@ func main() {
 	mappedDocuments := mapDocuments(input)
 
 	fmt.Println("The answer for the first part is:", howManyValidDocuments(mappedDocuments))
+	fmt.Println("The answer for the first part is:", howManyDocumentsWithValidFields(mappedDocuments))
 }
