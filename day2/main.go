@@ -1,7 +1,7 @@
 package main
 
 import (
-	"adventofcode/2020/linescanner"
+	"adventofcode/2020/inputscanner"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -13,7 +13,7 @@ func main() {
 		panic(err)
 	}
 
-	inputs, err := linescanner.ScanLines(curDir + "/input")
+	inputs, err := inputscanner.ScanLines(curDir + "/input")
 	if err != nil {
 		panic(err)
 	}

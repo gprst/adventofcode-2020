@@ -1,4 +1,4 @@
-package linescanner
+package inputscanner
 
 import (
 	"bufio"
