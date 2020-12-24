@@ -19,4 +19,5 @@ func main() {
 	}
 
 	fmt.Println("The answer for the first part is:", getHighestSeatID(inputs))
+	fmt.Println("The answer for the second part is:", getYourSeatID(inputs))
 }
