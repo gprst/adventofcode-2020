@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 )
 
+var patternLength uint16
+
 func main() {
 	curDir, err := filepath.Abs(filepath.Dir(os.Args[0]))
 	if err != nil {
@@ -17,6 +19,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	patternLength = uint16(len(inputs[0]))
 
 	fmt.Println("The answer for the first part is:", getEncounteredTreesCount(inputs))
 }
