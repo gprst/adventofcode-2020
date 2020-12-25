@@ -30,4 +30,5 @@ func main() {
 	groupsAnswers := getGroupsAnswers(input)
 
 	fmt.Println("The answer for the first part is:", sumUpGroupsPositiveAnswers(groupsAnswers))
+	fmt.Println("The answer for the first part is:", sumUpGroupsUnanimousAnswers(groupsAnswers))
 }
