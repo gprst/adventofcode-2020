@@ -26,4 +26,5 @@ func main() {
 	}
 
 	fmt.Println("The answer for the first part is:", getWeaknessNumber(inputs))
+	fmt.Println("The answer for the first part is:", getEncryptionWeakness(inputs))
 }
