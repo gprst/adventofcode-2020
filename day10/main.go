@@ -29,4 +29,5 @@ func main() {
 	sort.Ints(inputs)
 
 	fmt.Println("The answer for the first part is:", getMultipliedJoltDifferences(inputs))
+	fmt.Println("The answer for the second part is:", getAdaptersCombinations(inputs))
 }
