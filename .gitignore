@@ -1,3 +1,7 @@
-# Ignore executables
+# Ignore UNIX executables
 day[0-9]/day[0-9]
 day[0-9][0-9]/day[0-9][0-9]
+
+# Ignore Windows executables
+day[0-9]/day[0-9].exe
+day[0-9][0-9]/day[0-9][0-9].exe
